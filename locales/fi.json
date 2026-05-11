@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "blocks": {
     "load_video": "Lataa video: {{ description }}",
@@ -64,9 +73,16 @@
     "nested_product": "{{ product_title }} – {{ parent_title }}",
     "remove": "Poista",
     "view_pricing_info": "Näytä hinnoittelutiedot",
-    "open_hotspot": "Avoin yhteyspiste",
     "slideshow": "Diaesitys",
-    "header_navigation_label": "Ensisijainen"
+    "header_navigation_label": "Ensisijainen",
+    "home_logo_alt": "{{ store_name }} – Koti",
+    "active_filters": "AKtiiviset suodattimet:",
+    "product_details": "Tuotetiedot",
+    "show_product_details": "Näytä tuotteen {{ product_name }} tuotetiedot",
+    "featured_product": "Esittelyssä oleva tuote",
+    "search_suggestions_available": "Hakuehdotuksia saatavilla haulle {{ query }}",
+    "price_filter_low": "Halpa hinta",
+    "price_filter_high": "Kallis hinta"
   },
   "actions": {
     "add_to_cart": "Lisää ostoskoriin",
@@ -106,7 +122,9 @@
     "open_image_in_full_screen": "Avaa kuva koko näytön tilassa",
     "sort": "Lajittele",
     "show_all_options": "Näytä kaikki vaihtoehdot",
-    "open": "Avaa"
+    "open": "Avaa",
+    "back_to": "Takaisin kohteeseen {{ title }}",
+    "zoom_media": "Lähennä mediasisältö: {{ index }}"
   },
   "content": {
     "reviews": "arvostelua",
@@ -236,7 +254,7 @@
     "terms_and_policies": "Ehdot ja käytännöt",
     "item_count_cutoff": "Yli {{ count }} tuotetta",
     "pagination": {
-      "nav_label": "Sivunumerointinavigointi",
+      "nav_label": "Sivunumerointi",
       "previous": "Edellinen",
       "next": "Seuraava",
       "page": "Sivu {{ page }}"
@@ -262,7 +280,8 @@
     "items_added_to_cart": {
       "one": "Yksi tuote lisätty ostoskoriin",
       "other": "{{ count }} tuotetta lisätty ostoskoriin"
-    }
+    },
+    "quick_order_list": "Pikatilausluettelo"
   },
   "gift_cards": {
     "issued": {

@@ -1,3 +1,5 @@
+
+
 <script
   src="{{ 'results-list.js' | asset_url }}"
   type="module"
@@ -73,16 +75,6 @@
     {% endpaginate %}
   </div>
 </results-list>
-
-{% stylesheet %}
-  .main-collection-grid {
-    grid-column: var(--grid-column--mobile);
-
-    @media screen and (min-width: 750px) {
-      grid-column: var(--grid-column--desktop);
-    }
-  }
-{% endstylesheet %}
 
 {% schema %}
 {

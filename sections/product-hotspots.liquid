@@ -1,8 +1,15 @@
+
+
 <script
   src="{{ 'product-hotspot.js' | asset_url }}"
   type="module"
   fetchpriority="low"
 ></script>
+
+{% render 'quick-add-styles' %}
+{% render 'quick-add-modal-styles' %}
+{% render 'buy-buttons-styles' %}
+{% render 'product-badges-styles' %}
 
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
 

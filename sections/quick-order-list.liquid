@@ -1,3 +1,5 @@
+
+
 {% liquid
   assign items_in_cart = cart | line_items_for: product
   assign quick_order_form_id = 'QuickOrder-ProductForm-' | append: product.id | append: '-' | append: section.id
@@ -46,7 +48,7 @@
               class="visually-hidden"
               role="caption"
             >
-              {{ 'content.your_cart' | t }}
+              {{ 'content.quick_order_list' | t }}
             </div>
             <div
               class="quick-order-list__grid-header"

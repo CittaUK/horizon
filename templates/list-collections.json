@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "collection_list_Wfgh3m": {
       "type": "main-collection-list",
@@ -16,8 +16,6 @@
           "type": "group",
           "name": "t:names.header",
           "settings": {
-            "link": "",
-            "open_in_new_tab": false,
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -45,6 +43,9 @@
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
             "padding-block-start": 0,
             "padding-block-end": 48,
             "padding-inline-start": 0,
@@ -55,7 +56,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<h1>Shop by collection</h1>",
+                "text": "<h1>Collections</h1>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -88,7 +89,7 @@
           "static": true,
           "settings": {
             "placement": "below_image",
-            "horizontal_alignment": "flex-start",
+            "horizontal_alignment": "center",
             "vertical_alignment": "flex-start",
             "collection_card_gap": 8,
             "inherit_color_scheme": true,
@@ -129,7 +130,7 @@
               "name": "t:names.collection_card_image",
               "static": true,
               "settings": {
-                "image_ratio": "adapt",
+                "image_ratio": "portrait",
                 "toggle_overlay": false,
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
@@ -150,7 +151,7 @@
       "block_order": [
         "group_4FtiAg"
       ],
-      "name": "t:names.collection_list",
+      "name": "Collection list",
       "settings": {
         "layout_type": "grid",
         "carousel_on_mobile": false,

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -56,7 +65,10 @@
           "blocks": {}
         }
       },
-      "block_order": ["title", "content"],
+      "block_order": [
+        "title",
+        "content"
+      ],
       "settings": {
         "content_direction": "column",
         "gap": 32,
@@ -68,6 +80,32 @@
     "form": {
       "type": "section",
       "blocks": {
+        "text_d8iQ79": {
+          "type": "text",
+          "name": "t:names.content",
+          "settings": {
+            "text": "<p>We believe that choosing a Citta garment is the beginning of a conversation, not just a transaction. Whether you need guidance on finding the perfect fit, want to learn more about the artisans behind our fabrics, or simply wish to share your thoughts on the collection, we are here to listen. </p><p>Send us an email message below, and someone from our team will get back to you personally within 24 to 48 hours.</p><p>Alternatively message us on:</p><p>Instagram: <a href=\"https://www.instagram.com/citta.uk?igsh=bHlkMWxpNmMzNjhp&utm_source=qr\" target=\"_blank\" title=\"https://www.instagram.com/citta.uk?igsh=bHlkMWxpNmMzNjhp&utm_source=qr\">@Citta.UK</a></p><p>Whatsapp: <a href=\"https://wa.me/447729928361\" target=\"_blank\" title=\"https://wa.me/447729928361\">Click Here</a></p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
         "contact_form_UwiCkQ": {
           "type": "contact-form",
           "settings": {
@@ -100,7 +138,10 @@
           "block_order": []
         }
       },
-      "block_order": ["contact_form_UwiCkQ"],
+      "block_order": [
+        "text_d8iQ79",
+        "contact_form_UwiCkQ"
+      ],
       "name": "t:names.contact_form",
       "settings": {
         "content_direction": "column",
@@ -131,5 +172,8 @@
       }
     }
   },
-  "order": ["main", "form"]
+  "order": [
+    "main",
+    "form"
+  ]
 }
