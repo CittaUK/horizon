@@ -101,22 +101,62 @@
     endif
   endif
 
+  assign color_option_name = null
+  assign selected_color = null
+  assign color_values = '' | split: ','
+  
+  for option in selected_product.options_with_values
+    assign downcased_name = option.name | downcase
+    if downcased_name == 'color' or downcased_name == 'colour'
+      assign color_option_name = option.name
+      assign selected_color = option.selected_value
+      assign color_values = option.values
+      break
+    endif
+  endfor
+
   assign sorted_media = '' | split: ','
-  if selected_variant_media
-    assign sorted_media = sorted_media | concat: selected_product.media | where: 'id', selected_variant_media.id
+  
+  for media in selected_product.media
+    assign skip_media = false
 
-    for media in selected_product.media
-      if block_settings.hide_variants and variant_images contains media.src and sorted_media.size > 0
-        continue
+    if block_settings.hide_variants and variant_images contains media.src
+      if selected_variant_media and media.id != selected_variant_media.id
+        assign skip_media = true
       endif
+    endif
 
+    if color_option_name != null and media.alt != blank and skip_media == false
+      assign media_alt_downcased = media.alt | downcase
+      assign selected_color_downcased = selected_color | downcase
+      
+      if media_alt_downcased != selected_color_downcased
+        for color_val in color_values
+          assign color_val_downcased = color_val | downcase
+          if media_alt_downcased == color_val_downcased
+            assign skip_media = true
+            break
+          endif
+        endfor
+      endif
+    endif
+
+    unless skip_media
+      assign found_media = selected_product.media | where: 'id', media.id
+      assign sorted_media = sorted_media | concat: found_media
+    endunless
+  endfor
+
+  if selected_variant_media
+    assign final_sorted_media = '' | split: ','
+    assign final_sorted_media = final_sorted_media | concat: selected_product.media | where: 'id', selected_variant_media.id
+    for media in sorted_media
       if media.id != selected_variant_media.id
         assign found_media = selected_product.media | where: 'id', media.id
-        assign sorted_media = sorted_media | concat: found_media
+        assign final_sorted_media = final_sorted_media | concat: found_media
       endif
     endfor
-  else
-    assign sorted_media = selected_product.media
+    assign sorted_media = final_sorted_media
   endif
   assign has_image_drop = sorted_media | has: 'media_type', 'image'
 
