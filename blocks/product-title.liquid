@@ -5,46 +5,14 @@
   {% assign product_title = '<p role="heading" aria-level="3">' | append: text | append: '</p>' %}
   {% render 'text', fallback_text: product_title, block: block %}
 {% else %}
-  {% assign base_title = closest.product.title %}
-  {% assign variant = closest.product.selected_or_first_available_variant %}
-  {% if variant and variant.title != 'Default Title' %}
-    {% assign variant_suffix = variant.title | replace: ' / ', ' - ' %}
-    {% assign full_title = base_title | append: ' - ' | append: variant_suffix %}
-  {% else %}
-    {% assign full_title = base_title %}
-  {% endif %}
-  
-  {% assign product_title = '<p role="heading" aria-level="3"><span class="dynamic-product-title" data-base-title="' | append: base_title | escape | append: '">' | append: full_title | append: '</span></p>' %}
+  {% assign product_title = '<p role="heading" aria-level="3">' | append: closest.product.title | append: '</p>' %}
   <a
     class="contents user-select-text"
     ref="productTitleLink"
-    href="{{ variant.url }}"
+    href="{{ closest.product.selected_or_first_available_variant.url }}"
   >
     {% render 'text', fallback_text: product_title, block: block %}
   </a>
-
-  <script type="module">
-    import { ThemeEvents } from '{{ 'events.js' | asset_url }}';
-
-    const target = document.querySelector('.product-details');
-    if (target) {
-      target.addEventListener(ThemeEvents.variantUpdate, (event) => {
-        const variant = event.detail.resource;
-        if (variant) {
-          const titleEls = document.querySelectorAll('.dynamic-product-title');
-          titleEls.forEach(el => {
-            const baseTitle = el.getAttribute('data-base-title');
-            if (variant.title && variant.title !== 'Default Title') {
-              const suffix = variant.title.replace(/ \/ /g, ' - ');
-              el.textContent = `${baseTitle} - ${suffix}`;
-            } else {
-              el.textContent = baseTitle;
-            }
-          });
-        }
-      });
-    }
-  </script>
 {% endif %}
 
 {% schema %}

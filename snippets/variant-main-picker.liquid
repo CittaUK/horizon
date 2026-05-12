@@ -222,6 +222,37 @@
       </script>
     </form>
   </variant-picker>
+
+  <script type="module">
+    import { ThemeEvents } from '{{ 'events.js' | asset_url }}';
+
+    const originalTitleElement = document.querySelector('.product-details h1');
+    if (originalTitleElement && !originalTitleElement.dataset.baseTitle) {
+      const baseTitle = originalTitleElement.textContent.trim();
+      originalTitleElement.dataset.baseTitle = baseTitle;
+
+      const updateTitle = (variant) => {
+        if (variant && variant.title && variant.title !== 'Default Title') {
+          const suffix = variant.title.replace(/ \/ /g, ' - ');
+          originalTitleElement.textContent = `${baseTitle} - ${suffix}`;
+        } else {
+          originalTitleElement.textContent = baseTitle;
+        }
+      };
+
+      const jsonScript = document.querySelector('variant-picker script[type="application/json"]');
+      if (jsonScript) {
+        try {
+          const variant = JSON.parse(jsonScript.textContent);
+          updateTitle(variant);
+        } catch (e) {}
+      }
+
+      document.addEventListener(ThemeEvents.variantUpdate, (event) => {
+        updateTitle(event.detail.resource);
+      });
+    }
+  </script>
 {% endunless %}
 
 {% stylesheet %}
