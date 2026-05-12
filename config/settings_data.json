@@ -108,11 +108,6 @@
         "disabled": false,
         "settings": {}
       },
-      "1306064247955555917": {
-        "type": "shopify://apps/variant-title-king/blocks/starapps-vtk-embed/b9b7a642-58c3-4fe1-8f1b-ed3e502da04b",
-        "disabled": false,
-        "settings": {}
-      },
       "6159598353363395418": {
         "type": "shopify://apps/google-youtube/blocks/store_widget/14ec7bd0-ac77-49a9-9417-90752398bdff",
         "disabled": false,
@@ -127,6 +122,11 @@
       "0720502412572249433": {
         "type": "shopify://apps/air-reviews-1/blocks/app-embed/c4e1e9ca-4d46-4e76-bc39-7e42417cb327",
         "disabled": false,
+        "settings": {}
+      },
+      "1306064247955555917": {
+        "type": "shopify://apps/variant-title-king/blocks/starapps-vtk-embed/b9b7a642-58c3-4fe1-8f1b-ed3e502da04b",
+        "disabled": true,
         "settings": {}
       }
     },
