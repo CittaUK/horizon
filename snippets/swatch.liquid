@@ -23,6 +23,9 @@
     assign swatch_value = 'url(' | append: swatch_image_url | append: ')'
   elsif swatch.color
     assign swatch_value = 'rgb(' | append: swatch.color.rgb | append: ')'
+  elsif label != blank
+    assign color_handle = label | handleize
+    assign swatch_value = 'var(--swatch-color-' | append: color_handle | append: ')'
   endif
 
   case mode

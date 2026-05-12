@@ -96,9 +96,10 @@
     {%- for product_option in product_resource.options_with_values -%}
       {%- liquid
         assign swatch_count = product_option.values | map: 'swatch' | compact | size
+        assign downcased_name = product_option.name | downcase
       -%}
 
-      {% if swatch_count == 0 %}
+      {% if swatch_count == 0 and downcased_name != 'color' and downcased_name != 'colour' %}
         {% continue %}
       {% endif %}
 
@@ -156,7 +157,7 @@
                   type="radio"
                   name="{{ product_option.name | escape }}-{{ product_resource.id }}-swatch"
                   value="{{ product_option_value | escape }}"
-                  aria-label="{{ product_option_value.name }}"
+                  aria-label="{{ product_option_value.name | default: product_option_value }}"
                   data-input-id="{{ product_option.position }}-{{ forloop.index0 }}"
                   data-option-media-id="{{ featured_media.id }}"
                   data-option-value-id="{{ product_option_value.id }}"
@@ -171,6 +172,7 @@
                 {% render 'swatch',
                   swatch: product_option_value.swatch,
                   variant_image: featured_media,
+                  label: product_option_value
                 %}
                 {% render 'strikethrough-variant', product_option: product_option_value %}
               </label>

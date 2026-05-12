@@ -181,6 +181,18 @@
               },
               "blocks": {}
             },
+            "swatches_custom": {
+              "type": "swatches",
+              "settings": {
+                "product_swatches_alignment": "center",
+                "product_swatches_alignment_mobile": "center",
+                "hide_padding": false,
+                "product_swatches_padding_top": 4,
+                "product_swatches_padding_bottom": 4,
+                "product_swatches_padding_left": 0,
+                "product_swatches_padding_right": 0
+              }
+            },
             "price_EzJzMm": {
               "type": "price",
               "settings": {
@@ -207,7 +219,8 @@
           "block_order": [
             "card-gallery",
             "product_title_4nY4eT",
-            "price_EzJzMm"
+            "price_EzJzMm",
+            "swatches_custom"
           ]
         }
       },
