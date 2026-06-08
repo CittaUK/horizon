@@ -1,10 +1,10 @@
 
 
 {% liquid
-  assign order = 'logo,menu,localization,search,drawer_search,actions'
+  assign order = 'logo,menu,localization,search,drawer_search,actions,menu_right'
 
   if shop.customer_accounts_enabled
-    assign order = 'drawer_search,logo,menu,localization,search,actions'
+    assign order = 'drawer_search,logo,menu,localization,search,actions,menu_right'
   endif
 
   assign rows = 'top,bottom' | split: ','
@@ -63,6 +63,10 @@
 
   capture navigation_bar
     content_for 'block', type: '_header-menu', id: 'header-menu', variant: 'navigation_bar', transparent: transparent
+  endcapture
+
+  capture menu_right
+    content_for 'block', type: '_header-menu', id: 'header-menu-right'
   endcapture
   # theme-check-enable UniqueStaticBlockId
 
@@ -372,6 +376,7 @@
         first: first,
         logo: logo,
         menu: menu,
+        menu_right: menu_right,
         actions: actions,
         localization: localization_markup,
         search: search,
