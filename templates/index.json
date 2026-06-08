@@ -186,14 +186,15 @@
       "name": "t:names.collections_grid",
       "settings": {
         "collection_list": [
+          "sale-items",
+          "nehru-jackets",
           "kurta-sets",
           "kurta-tops",
-          "nehru-jackets",
           "trousers"
         ],
-        "layout_type": "grid",
-        "carousel_on_mobile": false,
-        "columns": 3,
+        "layout_type": "carousel",
+        "carousel_on_mobile": true,
+        "columns": 4,
         "mobile_columns": "2",
         "mobile_card_size": "60cqw",
         "columns_gap": 8,
@@ -721,6 +722,86 @@
             "padding-inline-end": 0
           },
           "blocks": {
+            "accordion_row_8rGhHF": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "What if I want to order in Bulk?",
+                "open_by_default": false,
+                "icon": "box",
+                "width": 20
+              },
+              "blocks": {
+                "text_76F3mA": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>As a new business we keep minimal stock on hand. </p><p>Please contact us directly for Bulk Orders, we offer discounts on bulk orders dependant on the number of items. </p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_76F3mA"
+              ]
+            },
+            "accordion_row_zh63gp": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "Do you do Custom Orders or Requests?",
+                "open_by_default": false,
+                "icon": "shirt",
+                "width": 20
+              },
+              "blocks": {
+                "text_UTBCPj": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Absolutely! We will endeavour to do help with custom designs or try match designs that you have seen before. </p><p>If here is something you have seen or would like designed, contact us directly. We will help you style accordingly and provide a non-obligation quote. </p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_UTBCPj"
+              ]
+            },
             "accordion_row_YzQxAF": {
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
@@ -734,7 +815,7 @@
                 "text_jNQ6aE": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Due to the current global situation deliveries are a bit slower than anticipated from our supplier. </p><p>We are currently running Orders for some of our products.</p><p>All Orders will be subject to full payment, and all orders will be dispatched within 5-10 working days. </p><p>If there are items required urgently, please contact us directly before placing an order. </p>",
+                    "text": "<p>Some items will show \"Pre-Order\" or \"Order\" rather than Buy Now. This means the item is currently out of stock but still available to order.</p><p>Due to the current global situation deliveries are a bit slower than anticipated from our supplier. </p><p>All Orders will be subject to full payment, and all orders will be dispatched within 5-10 working days. </p><p>If there are items required urgently, please contact us directly before placing an order. </p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -964,6 +1045,8 @@
             }
           },
           "block_order": [
+            "accordion_row_8rGhHF",
+            "accordion_row_zh63gp",
             "accordion_row_YzQxAF",
             "accordion_row_fndyM6",
             "accordion_row_NYLhJy",

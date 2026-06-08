@@ -33,8 +33,6 @@
     case item
       when 'actions'
         assign item_column = 'right'
-      when 'menu_right'
-        assign item_column = 'right'
     endcase
 
     if item_row == row
@@ -88,8 +86,6 @@
               {{ drawer_search }}
             {% when 'actions' %}
               {{ actions }}
-            {% when 'menu_right' %}
-              {{ menu_right }}
           {% endcase %}
         {% endunless %}
       {% endfor %}
