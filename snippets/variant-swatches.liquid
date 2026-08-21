@@ -139,9 +139,9 @@
 
                 if child_product
                   assign featured_media = child_product.featured_media
-                elsif product_option_value.variant == blank
+                else
                   for variant in product_resource.variants
-                    if variant.available and variant[swatch_option_key] == product_option_value.name and variant.featured_media
+                    if variant[swatch_option_key] == product_option_value.name and variant.featured_media
                       assign featured_media = variant.featured_media
                       assign first_available_variant = variant
                       break
