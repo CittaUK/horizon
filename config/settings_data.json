@@ -12,9 +12,6 @@
     "logo": "shopify://shop_images/Citta_Main_Photo.png",
     "logo_height": 100,
     "logo_height_mobile": 100,
-    "social_facebook_link": "https://www.facebook.com/profile.php?id=61586457122722",
-    "social_instagram_link": "https://www.instagram.com/citta.uk",
-    "social_tiktok_link": "https://www.tiktok.com/@citta.uk?_r=1&_t=ZN-94PO1HXZ3OY",
     "type_body_font": "inter_n4",
     "type_subheading_font": "inter_n5",
     "type_heading_font": "inter_n7",
@@ -80,6 +77,9 @@
     "variant_button_border_width": 1,
     "variant_button_radius": 14,
     "variant_button_width": "equal-width-buttons",
+    "social_facebook_link": "https://www.facebook.com/profile.php?id=61586457122722",
+    "social_instagram_link": "https://www.instagram.com/citta.uk",
+    "social_tiktok_link": "https://www.tiktok.com/@citta.uk?_r=1&_t=ZN-94PO1HXZ3OY",
     "content_for_index": [],
     "blocks": {
       "1232542678405107163": {
@@ -91,20 +91,13 @@
         "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": false,
         "settings": {
+          "greeting_message": "",
           "button_color": "#4a0404",
-          "secondary_color": "#f8e9d6",
-          "ternary_color": "#4a0404",
           "button_icon": "hand_wave",
           "button_text": "chat_with_us",
           "button_horizontal_position": "bottom_right",
-          "button_vertical_position": "higher",
-          "greeting_message": ""
+          "button_vertical_position": "higher"
         }
-      },
-      "8764476057892802672": {
-        "type": "shopify://apps/stoq/blocks/main/4bb73be2-b7c2-4870-949f-c528145452a3",
-        "disabled": false,
-        "settings": {}
       },
       "7147999719060634790": {
         "type": "shopify://apps/gsc-countdown-timer/blocks/countdown-bar/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
@@ -125,11 +118,6 @@
       "0720502412572249433": {
         "type": "shopify://apps/air-reviews-1/blocks/app-embed/c4e1e9ca-4d46-4e76-bc39-7e42417cb327",
         "disabled": false,
-        "settings": {}
-      },
-      "1306064247955555917": {
-        "type": "shopify://apps/variant-title-king/blocks/starapps-vtk-embed/b9b7a642-58c3-4fe1-8f1b-ed3e502da04b",
-        "disabled": true,
         "settings": {}
       }
     },
