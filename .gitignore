@@ -1,0 +1,8 @@
+# Local dev tools - not part of the Shopify theme
+deploy.ps1
+
+# Theme comparison temp folders
+_theme_compare/
+
+# IDE workspace settings
+.vscode/
