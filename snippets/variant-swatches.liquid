@@ -96,10 +96,15 @@
     {%- for product_option in product_resource.options_with_values -%}
       {%- liquid
         assign swatch_count = product_option.values | map: 'swatch' | compact | size
-        assign downcased_name = product_option.name | downcase
+        assign downcased_name = product_option.name | downcase | strip
       -%}
 
-      {% if swatch_count == 0 and downcased_name != 'color' and downcased_name != 'colour' %}
+      {% assign is_color_option = false %}
+      {% if downcased_name contains 'color' or downcased_name contains 'colour' %}
+        {% assign is_color_option = true %}
+      {% endif %}
+
+      {% if swatch_count == 0 and is_color_option == false %}
         {% continue %}
       {% endif %}
 

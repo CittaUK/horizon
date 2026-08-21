@@ -106,8 +106,8 @@
   assign color_values = '' | split: ','
   
   for option in selected_product.options_with_values
-    assign downcased_name = option.name | downcase
-    if downcased_name == 'color' or downcased_name == 'colour'
+    assign downcased_name = option.name | downcase | strip
+    if downcased_name contains 'color' or downcased_name contains 'colour'
       assign color_option_name = option.name
       assign selected_color = option.selected_value
       assign color_values = option.values
@@ -127,12 +127,12 @@
     endif
 
     if color_option_name != null and media.alt != blank and skip_media == false
-      assign media_alt_downcased = media.alt | downcase
-      assign selected_color_downcased = selected_color | downcase
+      assign media_alt_downcased = media.alt | downcase | strip
+      assign selected_color_downcased = selected_color | downcase | strip
       
       if media_alt_downcased != selected_color_downcased
         for color_val in color_values
-          assign color_val_downcased = color_val | downcase
+          assign color_val_downcased = color_val | downcase | strip
           if media_alt_downcased == color_val_downcased
             assign skip_media = true
             break
