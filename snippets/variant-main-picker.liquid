@@ -123,6 +123,16 @@
                     if featured_media == blank and product_option_value.product_url
                       assign featured_media = product_option_value.variant.product.featured_media
                     endif
+
+                    if featured_media == blank
+                      assign main_swatch_option_key = 'option' | append: product_option.position
+                      for v_item in product_resource.variants
+                        if v_item[main_swatch_option_key] == product_option_value.name and v_item.featured_media
+                          assign featured_media = v_item.featured_media
+                          break
+                        endif
+                      endfor
+                    endif
                   %}
 
                   {% render 'swatch',
