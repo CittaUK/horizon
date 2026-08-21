@@ -6,7 +6,7 @@
     assign swatch_count = product_option.values | map: 'swatch' | compact | size
     assign downcased_name = product_option.name | downcase | strip
 
-    if swatch_count > 0 or downcased_name contains 'color' or downcased_name contains 'colour'
+    if swatch_count > 0 or downcased_name contains 'color' or downcased_name contains 'colour' or downcased_name contains 'style'
       assign product_has_swatches = true
     endif
   endfor

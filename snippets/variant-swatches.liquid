@@ -100,7 +100,7 @@
       -%}
 
       {% assign is_color_option = false %}
-      {% if downcased_name contains 'color' or downcased_name contains 'colour' %}
+      {% if downcased_name contains 'color' or downcased_name contains 'colour' or downcased_name contains 'style' %}
         {% assign is_color_option = true %}
       {% endif %}
 

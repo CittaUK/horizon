@@ -107,7 +107,7 @@
   
   for option in selected_product.options_with_values
     assign downcased_name = option.name | downcase | strip
-    if downcased_name contains 'color' or downcased_name contains 'colour'
+    if downcased_name contains 'color' or downcased_name contains 'colour' or downcased_name contains 'style'
       assign color_option_name = option.name
       assign selected_color = option.selected_value
       assign color_values = option.values
